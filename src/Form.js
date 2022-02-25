@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./style.css";
-import DComp from "./DynamicComponent";
+
 export class Form extends Component {
 
     state = {
