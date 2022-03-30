@@ -19,12 +19,6 @@ export class Form extends Component {
         });
     }
 
-    changeState(val){
-        this.setState({
-            clicked:{val}
-        })
-    }
-
     onFormSubmit = (event) => {
         event.preventDefault();
         console.log("Worked")
@@ -35,13 +29,16 @@ export class Form extends Component {
             count:this.state.count
         };
 
-        this.state.array.push(temp_obj);
+
+        
+        // this.state.array.push(temp_obj); //if line 41 doesn't work uncomment this line
 
         this.setState({
             clicked:true,
             name:"",
             dept:"",
             rating:"",
+            array:[...this.state.array,temp_obj], //added now for trying
             count:this.state.count +1
         });    
     } 
